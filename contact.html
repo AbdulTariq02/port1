@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact - Aban</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="logo">
+            <h1>Aban's <br> Portfolio</h1>
+        </div>
+        <nav class="navigation">
+            <a href="first.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About</a>
+            <a href="contact.html" class="nav-item active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Feel free to reach out to me with any questions or collaborations!</p>
+            <p><strong>Email:</strong> abanirfan5@gmail.com</p>
+            <p><strong>Phone:</strong> <a href="tel:+923283497556">03283497556</a></p>
+            <p><strong>Follow me on:</strong></p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100086287201760" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/ab.an4979/profilecard/?igsh=MTdxYjhkMzF4OWU2Mw==" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Contact Form</h3>
+            <form action="send_email.php" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Connect with me:</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100086287201760" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a><br>
+            <a href="https://www.instagram.com/ab.an4979/profilecard/?igsh=MTdxYjhkMzF4OWU2Mw==" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a><br>
+            <a href="tel:+923283497556">
+                <i class="fas fa-phone"></i> Call me: 03283497556
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Basic form validation (optional)
+        document.querySelector("form").addEventListener("submit", function(event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
